@@ -1,0 +1,36 @@
+import { OnChanges, SimpleChanges } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NgImageSliderService } from './../ng-image-slider.service';
+import * as i0 from "@angular/core";
+export declare class SliderCustomImageComponent implements OnChanges {
+    imageSliderService: NgImageSliderService;
+    private sanitizer;
+    YOUTUBE: string;
+    IMAGE: string;
+    VIDEO: string;
+    fileUrl: SafeResourceUrl;
+    fileExtension: string;
+    type: string;
+    imageLoading: boolean;
+    showVideo: boolean;
+    videoAutoPlay: boolean;
+    showVideoControls: number;
+    currentImageIndex: number;
+    imageIndex: number;
+    speed: number;
+    imageUrl: any;
+    isVideo: boolean;
+    alt: String;
+    title: String;
+    direction: string;
+    ratio: boolean;
+    lazy: boolean;
+    fallbackImage: string;
+    constructor(imageSliderService: NgImageSliderService, sanitizer: DomSanitizer, document: any);
+    ngOnChanges(changes: SimpleChanges): void;
+    setUrl(): void;
+    videoClickHandler(event: any): void;
+    errorHandler(event: any): Promise<void>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SliderCustomImageComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderCustomImageComponent, "custom-img", never, { "showVideo": { "alias": "showVideo"; "required": false; }; "videoAutoPlay": { "alias": "videoAutoPlay"; "required": false; }; "showVideoControls": { "alias": "showVideoControls"; "required": false; }; "currentImageIndex": { "alias": "currentImageIndex"; "required": false; }; "imageIndex": { "alias": "imageIndex"; "required": false; }; "speed": { "alias": "speed"; "required": false; }; "imageUrl": { "alias": "imageUrl"; "required": false; }; "isVideo": { "alias": "isVideo"; "required": false; }; "alt": { "alias": "alt"; "required": false; }; "title": { "alias": "title"; "required": false; }; "direction": { "alias": "direction"; "required": false; }; "ratio": { "alias": "ratio"; "required": false; }; "lazy": { "alias": "lazy"; "required": false; }; "fallbackImage": { "alias": "fallbackImage"; "required": false; }; }, {}, never, never, false, never>;
+}
